@@ -1,5 +1,6 @@
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+#include<stdio.h>
+using namespace std;
 
 char c[3][3];
 
@@ -42,9 +43,9 @@ int check(char g,char c[3][3])
 	else return 0;
 }
 
-void main()
+int main()
 {
-	clrscr();
+	system("clear");
 	int k=0,m=0;
 	cout<<"TIC-TAC-TOE\n";
 	cout<<"Player 1 will give cross x\n";
@@ -56,16 +57,16 @@ void main()
 	cout<<"(0,0) (0,1) (0,2)\n(1,0) (1,1) (1,2)\n(2,0) (2,1) (2,2)\n";
 	while(k==0)
 	{
-		clrscr();
+		system("clear");
 		cout<<"TIC-TAC-TOE\n";
 		cout<<"Player 1 will give cross x\n";
 		cout<<"Player 2 will give circle o\n";
 		cout<<"Game position coordinates:\n";
 		cout<<"(0,0) (0,1) (0,2)\n(1,0) (1,1) (1,2)\n(2,0) (2,1) (2,2)\n";
-		for(i=0;i<3;i++)
+		for(int i=0;i<3;i++)
 		{
 			cout<<"---------------\n";
-			for(j=0;j<3;j++)
+			for(int j=0;j<3;j++)
 			{
 				cout<<"| "<<c[i][j]<<" |";
 			}
@@ -89,15 +90,15 @@ void main()
 	if(k==1&&m%2==0) cout<<"Player 1 wins\n";
 	if(k==1&&m%2!=0) cout<<"Player 2 wins\n";
 	if(k==2) cout<<"Match drawn\n";
-	for(i=0;i<3;i++)
+	for(int i=0;i<3;i++)
 		{
 			cout<<"---------------\n";
-			for(j=0;j<3;j++)
+			for(int j=0;j<3;j++)
 			{
 				cout<<"| "<<c[i][j]<<" |";
 			}
 			cout<<"\n";
 		}
 		cout<<"---------------\n";
-	getch();
+return 0;
 }
